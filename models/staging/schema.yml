@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bike_data_dev
+    tables:
+      - name: old_bike_data
+      - name: new_bike_data
+  - name: dbt_underseanate
+    tables:
+      - name: clean_bike_data_new_format
+      - name: clean_bike_data_old_format
