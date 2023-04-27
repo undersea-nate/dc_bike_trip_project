@@ -8,6 +8,21 @@ The goal of this project is to build a data pipeline to automatically download, 
 
 The Capital Bikeshare website [uploads data quarterly](https://s3.amazonaws.com/capitalbikeshare-data/index.html). From April 2021 onwards, the uploaded datasets changed slightly in format, requiring separate airflow DAGs to handle the data differently depending on upload date. This change affected the names of several columns but also added more variables (such as latitude and longitude) to each ride. Latitude and longitude were added to the pre-April 2021 datasets with DBT later on in the project. Other columns were renamed within DBT so that a final, master dataset could be created. 
 
+The final dataset (after transformations) will have these columns:
+
+* Date
+* Year
+* Month
+* Duration - float representing hours that the trip took
+* Start_time
+* End_time
+* Start_hour
+* End_hour
+* Start_station, End_station - strings representing the name of each station, usually referencing a local landmark or nearby streets
+* Member_casual - boolean representing if each trip was undertaken by a member of Capital Bikeshare or a non-member
+* start_lng, start_lat, end_lng, end_lat - floats representing the longtitude and latitude that each trip started and ended at
+* start_loc, end_loc - floats representing the longtitude and latitude that each trip started and ended at in the format that Looker Studio can use for map visuals.
+
 ## Technologies and Architecture
 
 This project uses the following technologies for its implementation:
