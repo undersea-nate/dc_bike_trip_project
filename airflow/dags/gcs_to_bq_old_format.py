@@ -54,7 +54,7 @@ with DAG(dag_id="gcs_to_bq_old_format",
         },
     )
 
-    CREATE_BQ_TBL_QUERY = ( #add partitioned by later
+    CREATE_BQ_TBL_QUERY = (
         f"CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{FORMAT}_{DATASET} \
         PARTITION BY date\
         AS \
@@ -78,6 +78,4 @@ with DAG(dag_id="gcs_to_bq_old_format",
         }
     )
 
-    #bigquery_external_table_task >> 
-    #bq_create_partitioned_table_job
     move_files_gcs_task >> bigquery_external_table_task >> bq_create_partitioned_table_job
