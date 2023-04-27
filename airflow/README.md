@@ -137,7 +137,7 @@ This task creates an external table for all the datasets uploaded to the GCS buc
     )
 ```
 
-One benefit of Google BigQuery over other Data Warehouses (such as Redshift) is that BigQuery can automatically detect the correct column type without having to be explicitely defined. This can be changed later but is very helpful at this stage of data processing.
+BigQuery can automatically detect the correct column type without having to be explicitely defined. This can be changed later but is very helpful at this stage of data processing.
 
 ### bq_create_partitioned_table_job
 
@@ -198,5 +198,5 @@ This DAG is almost identical to the GCS_To_BQ_Old_Format DAG, with the exception
     )
 ```
 
-Two columns (start_station_id and end_station_id) were corrupted and caused issues when querying the dataset later in DBT, so they were removed from the dataset in this step. 
+Two columns (start_station_id and end_station_id) were corrupted and caused issues when querying the dataset later in DBT, so they were removed from the data in this step. 
 
