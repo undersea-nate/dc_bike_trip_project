@@ -18,7 +18,7 @@ This model also specifies that duration has to be greater than 0. Several observ
 
 ## Tests
 
-There are also three tests which are used to determine if certain conditions are met in the final dataset. 
+There are also two tests which are used to determine if certain conditions are met in the final dataset. 
 
 1. assert_duration_gt_zero.sql - this test simply determines if all observations had durations greater than 0.
 3. assert_yr_lt_2019.sql - this test determines if all observations were collected during or after 2019, which is the start date of this project. 
