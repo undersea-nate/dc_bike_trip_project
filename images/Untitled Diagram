@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" modified="2023-04-27T06:34:16.104Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="EnmM-jw3qLPUzNAv8Y6m" version="21.2.3" type="google">
+  <diagram name="Page-1" id="yP0IIJSYbnpCaJirlQVB">
+    <mxGraphModel dx="1050" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-17" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#ea4335;" vertex="1" parent="1">
+          <mxGeometry x="230" y="180" width="580" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-13" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#017cee;" vertex="1" parent="1">
+          <mxGeometry x="50" y="240" width="550" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png;imageBackground=default;" vertex="1" parent="1">
+          <mxGeometry x="65" y="347.09" width="103.44" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4sQ7-5X210L6jtd2UvTT-6" target="4sQ7-5X210L6jtd2UvTT-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-6" value="&lt;b&gt;Capital Bikeshare Website&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65.00000000000001" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4sQ7-5X210L6jtd2UvTT-7" target="4sQ7-5X210L6jtd2UvTT-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-7" value="&lt;b&gt;Google Cloud Storage&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="265" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4sQ7-5X210L6jtd2UvTT-9" target="4sQ7-5X210L6jtd2UvTT-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4sQ7-5X210L6jtd2UvTT-9" target="4sQ7-5X210L6jtd2UvTT-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="360" />
+              <mxPoint x="500" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-9" value="&lt;b&gt;Google BigQuery&lt;br&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="464.99999999999994" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-11" value="&lt;b&gt;Looker Studio&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4sQ7-5X210L6jtd2UvTT-13" target="4sQ7-5X210L6jtd2UvTT-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-16" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png;" vertex="1" parent="1">
+          <mxGeometry x="185" y="340" width="55.02" height="47.09" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-18" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.ucloudstore.com/wp-content/uploads/2021/09/gcp-02.png;" vertex="1" parent="1">
+          <mxGeometry x="730" y="182.81" width="55" height="57.19" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-19" value="" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4sQ7-5X210L6jtd2UvTT-19" target="4sQ7-5X210L6jtd2UvTT-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="340" as="sourcePoint" />
+            <mxPoint x="450" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-25" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_017ca5b65bc8cc79fa434f2716af16ee/dbt.png;" vertex="1" parent="1">
+          <mxGeometry x="480" y="436.38" width="90" height="47.25" as="geometry" />
+        </mxCell>
+        <mxCell id="4sQ7-5X210L6jtd2UvTT-26" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://logovectorseek.com/wp-content/uploads/2020/06/capital-bikeshare-logo-vector.png;clipPath=inset(67.37% 0% 0% 0%);" vertex="1" parent="1">
+          <mxGeometry x="74.96" y="260" width="105.04" height="19.08" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
