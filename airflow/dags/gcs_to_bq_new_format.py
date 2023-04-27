@@ -28,15 +28,6 @@ with DAG(dag_id="gcs_to_bq_new_format",
         max_active_runs=1,
         default_args=default_args,
         catchup=False) as dag:
-
-    #move_files_gcs_task = GCSToGCSOperator(
-    #    task_id=f'move_{FORMAT}_files_task',
-    #    source_bucket=BUCKET,
-    #    source_object=f'{FORMAT}/*.{INPUT_FILETYPE}',
-    #    destination_bucket=BUCKET,
-    #    destination_object=f'{FORMAT}/{FORMAT}_{DATASET}.{INPUT_FILETYPE}',
-    #    move_object=True
-    #)
     
     bigquery_external_table_task = BigQueryCreateExternalTableOperator(
         task_id=f"bq_{FORMAT}_{DATASET}_external_table_task",
@@ -74,41 +65,6 @@ with DAG(dag_id="gcs_to_bq_new_format",
         member_casual, \
         FROM {BIGQUERY_DATASET}.{FORMAT}_{DATASET}_external_table as table;"
     )
-
-    #CREATE_BQ_TBL_QUERY = (
-    #    f"CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{FORMAT}_{DATASET} \
-    #    PARTITION BY date\
-    #    AS \
-    #    SELECT \
-    #    EXTRACT(date FROM started_at) as date, \
-    #    EXTRACT(year FROM started_at) as year, \
-    #    EXTRACT(month FROM started_at) as month, \
-    #    CAST(rideable_type as STRING) as rideable_type, \
-    #    CAST(started_at as STRING) as started_at, \
-    #    CAST(ended_at as STRING) as ended_at, \
-    #    CAST(start_station_name as STRING) as start_station_name, \
-    #    CAST(end_station_name as STRING) as end_station_name, \
-    #    CAST(start_lat as STRING) as start_lat, \
-    #    CAST(start_lng as STRING) as start_lng, \
-    #    CAST(end_lat as STRING) as end_lat, \
-    #    CAST(end_lng as STRING) as end_lng, \
-    #    CAST(member_casual as STRING) as member_casual, \
-    #    FROM {BIGQUERY_DATASET}.{FORMAT}_{DATASET}_external_table as table;"
-    #)
-
-    #CREATE_BQ_TBL_QUERY = (
-    #    f"CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{FORMAT}_{DATASET} \
-    #    PARTITION BY date\
-    #    AS \
-    #    SELECT \
-    #    EXTRACT(date FROM started_at) as date, \
-    #    EXTRACT(year FROM started_at) as year, \
-    #    EXTRACT(month FROM started_at) as month, \
-    #    table.* \
-    #    FROM {BIGQUERY_DATASET}.{FORMAT}_{DATASET}_external_table as table;"
-    #)
-
-
 
     # Create a partitioned table from external table
     bq_create_partitioned_table_job = BigQueryInsertJobOperator(
