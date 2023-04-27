@@ -53,22 +53,27 @@ The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6
 
 ## How to replicate
 
-1. Create Google Cloud environment. After setting up an account, grant your service account permissions for BigQuery Admin, Storage Admin and Storage Object Admin. Afterwards, download the JSON file and export it your Google SDK credentials. 
+1. Create Google Cloud environment. After setting up an account, grant your service account permissions for BigQuery Admin, Storage Admin and Storage Object Admin. Afterwards, download the JSON file and store it in a well-known location.
 
-2. Set up infrastructure using terraform. First install the terraform files and then use these bash commands to set up the proper 
+2. Install Google SDK and export your Google credentials JSON file to set your account as default.
 
-
-infrastructure:
+You can run this code to accomplish this:
 
 ```bash
-# Refresh service-account's auth-token for this session
+gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
 gcloud auth application-default login
+```
+
+2. Set up infrastructure using terraform. First install the terraform files and then use these bash commands to set up the proper infrastructure:
+
+```bash
 terraform init
 terraform plan -var="project=<your-gcp-project-id>"
+terraform apply -var="project=<your-gcp-project-id>"
 ```
 
 3. Set up Airflow by downloading the files from this repository and initializing the docker-compose file. You can simply modify the global variables within each DAG to specify which months you would like to download data for. At this point, you should have tables in BigQuery which are ready to be transformed and combined in DBT. 
 
-4. Download and run the DBT models and tests. 
+4. Download and run the DBT models and tests. You may have to [set up a DBT environment](https://docs.getdbt.com/docs/collaborate/environments/environments-in-dbt). 
 
 5. Create a LookerStudio dashboard and connect to the proper data source in BigQuery that was created within DBT. 
