@@ -2,7 +2,7 @@
 
 ## Overview
 
-The goal of this project is to build a data pipeline to automatically download, posture, and present data collected by Capital Bikeshare, a bikesharing company local to the Washington, DC area. Airflow is used to build the data pipelines that download the Capital Bikeshare data off the web and upload the datasets to GCS and Google BigQuery. Within BigQuery, the data is then cleaned, engineered, and tested with DBT, which produces the final datasets that are used for the visualizations. The final deliverable of this project is an interactive dashboard created within Looker Studio, where several metrics (such as ridership, membership percentage, and ride duraction) can be easily explored.
+The goal of this project is to build a data pipeline to automatically download, transform, and present data collected by Capital Bikeshare, a bikesharing company local to the Washington, DC area, in order to explore how various metrics such as ridership, membership percentage, and ride duration vary over time and location. Airflow is used to build the data pipelines that download the Capital Bikeshare data off the web and upload the datasets to GCS and Google BigQuery. Within BigQuery, the data is then cleaned, engineered, and tested with DBT, which produces the final datasets that are used for the visualizations. The final deliverable of this project is an interactive dashboard created within Looker Studio, where key metrics can be easily explored.
 
 ## Dataset
 
