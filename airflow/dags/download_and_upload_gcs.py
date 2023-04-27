@@ -65,7 +65,7 @@ default_args = {
 }
 
 with DAG(dag_id="download_and_upload_gcs", 
-         schedule_interval="@dmonthly", 
+         schedule_interval="@monthly", 
          max_active_runs = 1,
          default_args=default_args,
          catchup=False) as dag:
