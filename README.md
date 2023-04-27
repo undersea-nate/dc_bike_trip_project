@@ -23,7 +23,7 @@ This project uses the following technologies for its implementation:
 
 The end-to-end process follows this sequence:
 
-(insert image here later)
+![Dashboard](images/Diagram.jpg)
 
 ## Dashboard
 
