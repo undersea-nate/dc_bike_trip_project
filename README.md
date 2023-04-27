@@ -48,7 +48,7 @@ terraform init
 terraform plan -var="project=<your-gcp-project-id>"
 ```
 
-3. Set up Airflow by downloading the files from this repository and initializing the docker-compose file. At this point, you can simply modify the global variables within each DAG to specify which months you would like to download data for. At this point, you should have tables in BigQuery which are ready to be transformed and combined in DBT. 
+3. Set up Airflow by downloading the files from this repository and initializing the docker-compose file. You can simply modify the global variables within each DAG to specify which months you would like to download data for. At this point, you should have tables in BigQuery which are ready to be transformed and combined in DBT. 
 
 4. Download and run the DBT models and tests. 
 
