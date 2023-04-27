@@ -45,7 +45,7 @@ with DAG(dag_id="gcs_to_bq_new_format",
         },
     )
 
-    CREATE_BQ_TBL_QUERY = ( #removed start_station_id and end_station_id because the columsn were corrupted
+    CREATE_BQ_TBL_QUERY = (
         f"CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{FORMAT}_{DATASET} \
         PARTITION BY date\
         AS \
@@ -77,5 +77,4 @@ with DAG(dag_id="gcs_to_bq_new_format",
         }
     )
 
-    #move_files_gcs_task 
     bigquery_external_table_task >> bq_create_partitioned_table_job
