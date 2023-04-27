@@ -78,4 +78,4 @@ with DAG(dag_id="gcs_to_bq_old_format",
         }
     )
 
-    move_files_gcs_task >> bigquery_external_table_task >> bq_create_partitioned_table_job
+    bigquery_external_table_task >> bq_create_partitioned_table_job
