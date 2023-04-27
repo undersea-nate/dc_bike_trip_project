@@ -6,7 +6,7 @@ The goal of this project is to build a data pipeline to automatically download, 
 
 ## Dataset
 
-The Capital Bikeshare website [uploads data quarterly](https://s3.amazonaws.com/capitalbikeshare-data/index.html). From April 2021 onwards, the uploaded datasets changed slightly in format, requiring separate airflow DAGs to handle the data differently depending on upload date. This change affected the names of several columns but also added several more variables to each ride. Latitude and longitude were added to the pre-April 2021 datasets with DBT later on in the project to be consistent with data collected post-April 2021. Other columns were renamed within DBT so that a final, master dataset could be created. 
+The Capital Bikeshare website [uploads data quarterly](https://s3.amazonaws.com/capitalbikeshare-data/index.html). From April 2020 onwards, the uploaded datasets changed slightly in format, requiring separate airflow DAGs to handle the data differently depending on upload date. This change affected the names of several columns but also added several more variables to each ride. Latitude and longitude were added to the pre-April 2020 datasets with DBT later on in the project to be consistent with data collected post-April 2020. Other columns were renamed within DBT so that a final, master dataset could be created. 
 
 The final dataset (after transformations) has these columns:
 
