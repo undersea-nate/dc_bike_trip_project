@@ -20,6 +20,7 @@ This project uses the following technologies for its implementation:
     - Looker Studio: creates visualizations within a dashboard
 4. DBT Cloud: cleans, transforms, and combines data to prepare for visualization
 5. SQL: Used at various points within BigQuery and DBT
+6. Terraform: IaC used to create infrastructure within GCP.
 
 The end-to-end process follows this sequence:
 
@@ -39,7 +40,10 @@ The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6
 
 1. Create Google Cloud environment. After setting up an account, grant your service account permissions for BigQuery Admin, Storage Admin and Storage Object Admin. Afterwards, download the JSON file and export it your Google SDK credentials. 
 
-2. Set up infrastructure using terraform. First install the terraform files and then use these bash commands to set up the proper GCP infrastructure:
+2. Set up infrastructure using terraform. First install the terraform files and then use these bash commands to set up the proper 
+
+
+infrastructure:
 
 ```bash
 # Refresh service-account's auth-token for this session
