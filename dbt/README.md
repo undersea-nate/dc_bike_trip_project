@@ -1,16 +1,16 @@
-### DBT
+# DBT
 
 ## Models
 
-# Clean_bike_data_old_format.sql
+### Clean_bike_data_old_format.sql
 
 This model is used to prepare the bigquery dataset based on the old file formats for the final dataset. Many of the variable names were renamed in this model to standardize names with the new file formats. In addition, this model uses a seed (which is a static file primarily used for data mapping) to add latitude and longitude data. Finally, this model also creates location variables from latitude and longitude, which can be used to create geo fields in Looker Studio later on. 
 
-# Clean_bike_data_new_format.sql
+### Clean_bike_data_new_format.sql
 
 This model is used to prepare the bigquery dataset based on the new file formats for the final dataset. This file is simplier compared to the old format because longitude and latitude were already included when these files were downloaded off the web.
 
-# All_bike_data.sql
+### All_bike_data.sql
 
 This model simply combines the previous two models to create a final dataset that will be used in Looker Studio.
 
