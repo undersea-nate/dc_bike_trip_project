@@ -24,7 +24,7 @@ default_args = {
 }
 
 with DAG(dag_id="gcs_to_bq_new_format",
-        schedule_interval="@daily",
+        schedule_interval="@monthly",
         max_active_runs=1,
         default_args=default_args,
         catchup=False) as dag:

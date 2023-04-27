@@ -47,11 +47,9 @@ def upload_to_gcs(bucket, object_name, local_file):
     :param local_file: source path & file-name
     :return:
     """
-    # WORKAROUND to prevent timeout for files > 6 MB on 800 kbps upload speed.
-    # (Ref: https://github.com/googleapis/python-storage/issues/74)
-    storage.blob._MAX_MULTIPART_SIZE = 5 * 1024 * 1024  # 5 MB
-    storage.blob._DEFAULT_CHUNKSIZE = 5 * 1024 * 1024  # 5 MB
-    # End of Workaround
+    
+    storage.blob._MAX_MULTIPART_SIZE = 5 * 1024 * 1024 
+    storage.blob._DEFAULT_CHUNKSIZE = 5 * 1024 * 1024 
 
     client = storage.Client()
     bucket = client.bucket(bucket)
@@ -67,7 +65,7 @@ default_args = {
 }
 
 with DAG(dag_id="download_and_upload_gcs", 
-         schedule_interval="@daily", 
+         schedule_interval="@dmonthly", 
          max_active_runs = 1,
          default_args=default_args,
          catchup=False) as dag:
