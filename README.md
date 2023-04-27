@@ -31,4 +31,6 @@ The final product is a dashboard, which explores various metrics (such as rider 
 
 The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6a255a13-aef9-4e6a-824d-4020e220c9e0).
 
+![Dashboard](images/Dashboard_1.jpg)
 
+![Dashboard](images/Dashboard_2.jpg)
