@@ -34,3 +34,22 @@ The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6
 ![Dashboard](images/Dashboard_1.jpg)
 
 ![Dashboard](images/Dashboard_2.jpg)
+
+## How to replicate
+
+1. Create Google Cloud environment. After setting up an account, grant your service account permissions for BigQuery Admin, Storage Admin and Storage Object Admin. Afterwards, download the JSON file and export it your Google SDK credentials. 
+
+2. Set up infrastructure using terraform. First install the terraform files and then use these bash commands to set up the proper GCP infrastructure:
+
+```bash
+# Refresh service-account's auth-token for this session
+gcloud auth application-default login
+terraform init
+terraform plan -var="project=<your-gcp-project-id>"
+```
+
+3. Set up Airflow by downloading the files from this repository and initializing the docker-compose file. At this point, you can simply modify the global variables within each DAG to specify which months you would like to download data for. At this point, you should have tables in BigQuery which are ready to be transformed and combined in DBT. 
+
+4. Download and run the DBT models and tests. 
+
+5. Create a LookerStudio dashboard and connect to the proper data source in BigQuery that was created within DBT. 
