@@ -6,7 +6,7 @@ The goal of this project is to build a data pipeline to automatically download, 
 
 ## Dataset
 
-The Capital Bikeshare website uploads data quarterly (https://s3.amazonaws.com/capitalbikeshare-data/index.html). From April 2021 onwards, the uploaded datasets changed slightly in format, requiring separate airflow DAGs to handle the data differently depending on upload date. This change affected the names of several columns but also added more variables (such as latitude and longitude) to each ride. Latitude and longitude were added to the pre-April 2021 datasets with DBT later on in the project. Other columns were renamed within DBT so that a final, master dataset could be created. 
+The Capital Bikeshare website [uploads data quarterly](https://s3.amazonaws.com/capitalbikeshare-data/index.html). From April 2021 onwards, the uploaded datasets changed slightly in format, requiring separate airflow DAGs to handle the data differently depending on upload date. This change affected the names of several columns but also added more variables (such as latitude and longitude) to each ride. Latitude and longitude were added to the pre-April 2021 datasets with DBT later on in the project. Other columns were renamed within DBT so that a final, master dataset could be created. 
 
 ## Technologies and Architecture
 
@@ -25,10 +25,10 @@ The end-to-end process follows this sequence:
 
 (insert image here later)
 
-## Final Product 
+## Dashboard
 
 The final product is a dashboard, which explores various metrics (such as rider count, membership %, and ride duration) over time. The dashboard also provides geo data, which explores how ridership is concentrated across the DC metro, and how this ridership has shifted over time. 
 
-(insert image here later)
+The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6a255a13-aef9-4e6a-824d-4020e220c9e0).
 
 
