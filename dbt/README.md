@@ -4,7 +4,7 @@
 
 ### Clean_bike_data_old_format.sql
 
-This model is used to prepare the bigquery dataset based on the old file formats for the final dataset. Many of the variable names were renamed in this model to standardize names with the new file formats. In addition, this model uses a seed (which is a static file primarily used for data mapping) to add latitude and longitude data. Finally, this model also creates location variables from latitude and longitude, which can be used to create geo fields in Looker Studio later on. 
+This model is used to prepare the BigQuery dataset based on the old file formats for the final dataset. Many of the variable names were renamed in this model to standardize names with the new file formats. In addition, this model uses a seed (which is a static file primarily used for data mapping) to add latitude and longitude data. Finally, this model also creates location variables from latitude and longitude, which can be used to create geo fields in Looker Studio later on. 
 
 ### Clean_bike_data_new_format.sql
 
@@ -15,6 +15,10 @@ This model is used to prepare the bigquery dataset based on the new file formats
 This model simply combines the previous two models to create a final dataset that will be used in Looker Studio.
 
 This model also specifies that duration has to be greater than 0. Several observations had negative durations, which means that the end time was earlier than the start time. These observations were likely filed in error, and therefore were removed at this stage.
+
+### All_bike_data_daily_prop.sql
+
+This model simply transforms All_bike_data so that the proportion of traffic by hour, season, and date can be easily read by BigQuery into Looker Studio.
 
 ## Tests
 
