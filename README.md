@@ -2,7 +2,7 @@
 
 ## Overview
 
-The goal of this project is to build a data pipeline to automatically download, transform, and present data collected by Capital Bikeshare, a bikesharing company local to the Washington, DC area, in order to explore how various metrics such as ridership, membership percentage, and ride duration vary over time and location. Airflow is used to build the data pipelines that download the Capital Bikeshare data off the web and upload the datasets to GCS and Google BigQuery. Within BigQuery, the data is then cleaned, engineered, and tested with DBT, which produces the final datasets that are used for the visualizations. The final deliverable of this project is an interactive dashboard created within Looker Studio, where key metrics can be easily explored.
+The goal of this project is to build a data pipeline to automatically download, transform, and present data collected by Capital Bikeshare, a bikesharing company local to the Washington, DC area, in order to explore how various metrics such as ridership, membership percentage, and ride duration vary over time and location. Airflow is used to build the data pipelines that download the Capital Bikeshare data off the web and upload the datasets to GCS and Google BigQuery. Within BigQuery, the data is then cleaned, engineered, and tested with DBT, which produces the final datasets that are used for the visualizations. The final deliverable of this project is an interactive dashboard created within Looker Studio, where key metrics can be easily explored. The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6a255a13-aef9-4e6a-824d-4020e220c9e0).
 
 ## Dataset
 
@@ -10,18 +10,20 @@ The Capital Bikeshare website [uploads data quarterly](https://s3.amazonaws.com/
 
 The final dataset (after transformations) has these columns:
 
-* Date
-* Year
-* Month
-* Duration - float representing hours that the trip took
-* Start_time
-* End_time
-* Start_hour
-* End_hour
-* Start_station, End_station - strings representing the name of each station, usually referencing a local landmark or nearby streets
-* Member_casual - boolean representing if each trip was undertaken by a member of Capital Bikeshare or a non-member
-* start_lng, start_lat, end_lng, end_lat - floats representing the longtitude and latitude that each trip started and ended at
-* start_loc, end_loc - floats representing the longtitude and latitude that each trip started and ended at in the format that Looker Studio can use for map visuals.
+| Column(s)  | Data type | 
+| ------------- | ------------- | 
+| Date  | Date  | 
+| Year  | Integer |
+| Month  | Integer |
+| Duration of trip  | Float |
+| Start time, End time  | Datetime |
+| Start hour, End hour  | Integer |
+| Start station, end station  | String |
+| Member type | Boolean |
+| Start longitude, End latitude  | Float |
+| End longitude, End latitude  | Float |
+
+The longitude and latitude data is used by Looker Studio for map visuals. 
 
 ## Technologies and Architecture
 
