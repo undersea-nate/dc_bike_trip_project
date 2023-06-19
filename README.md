@@ -51,6 +51,8 @@ The dashboard can be accessed [here](https://lookerstudio.google.com/reporting/6
 
 ![Dashboard](images/Dashboard_1.jpg)
 
+![Dashboard](images/Dashboard_3.jpg)
+
 ![Dashboard](images/Dashboard_2.jpg)
 
 ## How to replicate
